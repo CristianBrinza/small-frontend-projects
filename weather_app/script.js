@@ -148,37 +148,37 @@ function getWeatherDescription(code) {
 // Get the corresponding weather icon based on Open-Meteo weather code
 function getWeatherIcon(code) {
   const iconMap = {
-    0: '/weather_app/images/sun.svg',           // Clear sky
-    1: '/weather_app/images/sun.svg',           // Mainly clear
-    2: '/weather_app/images/partly-cloudy.svg', // Partly cloudy
-    3: '/weather_app/images/overcast.svg',      // Overcast
-    45: '/weather_app/images/fog.svg',          // Fog
-    48: '/weather_app/images/fog.svg',          // Depositing rime fog
-    51: '/weather_app/images/drizzle.svg',      // Light drizzle
-    53: '/weather_app/images/drizzle.svg',      // Moderate drizzle
-    55: '/weather_app/images/drizzle.svg',      // Dense drizzle
-    56: '/weather_app/images/freezing-drizzle.svg', // Light freezing drizzle
-    57: '/weather_app/images/freezing-drizzle.svg', // Dense freezing drizzle
-    61: '/weather_app/images/rain.svg',         // Slight rain
-    63: '/weather_app/images/rain.svg',         // Moderate rain
-    65: '/weather_app/images/heavy-rain.svg',   // Heavy rain
-    66: '/weather_app/images/freezing-rain.svg',// Light freezing rain
-    67: '/weather_app/images/freezing-rain.svg',// Heavy freezing rain
-    71: '/weather_app/images/snow.svg',         // Slight snow fall
-    73: '/weather_app/images/snow.svg',         // Moderate snow fall
-    75: '/weather_app/images/heavy-snow.svg',   // Heavy snow fall
-    77: '/weather_app/images/snow-grains.svg',  // Snow grains
-    80: '/weather_app/images/rain-showers.svg', // Slight rain showers
-    81: '/weather_app/images/rain-showers.svg', // Moderate rain showers
-    82: '/weather_app/images/violent-rain.svg', // Violent rain showers
-    85: '/weather_app/images/snow-showers.svg', // Slight snow showers
-    86: '/weather_app/images/heavy-snow-showers.svg', // Heavy snow showers
-    95: '/weather_app/images/thunderstorm.svg', // Thunderstorm
-    96: '/weather_app/images/thunderstorm-hail.svg', // Thunderstorm with slight hail
-    99: '/weather_app/images/thunderstorm-heavy-hail.svg' // Thunderstorm with heavy hail
+    0: '../weather_app/images/sun.svg',           // Clear sky
+    1: '../weather_app/images/sun.svg',           // Mainly clear
+    2: '../weather_app/images/partly-cloudy.svg', // Partly cloudy
+    3: '../weather_app/images/overcast.svg',      // Overcast
+    45: '../weather_app/images/fog.svg',          // Fog
+    48: '../weather_app/images/fog.svg',          // Depositing rime fog
+    51: '../weather_app/images/drizzle.svg',      // Light drizzle
+    53: '../weather_app/images/drizzle.svg',      // Moderate drizzle
+    55: '../weather_app/images/drizzle.svg',      // Dense drizzle
+    56: '../weather_app/images/freezing-drizzle.svg', // Light freezing drizzle
+    57: '../weather_app/images/freezing-drizzle.svg', // Dense freezing drizzle
+    61: '../weather_app/images/rain.svg',         // Slight rain
+    63: '../weather_app/images/rain.svg',         // Moderate rain
+    65: '../weather_app/images/heavy-rain.svg',   // Heavy rain
+    66: '../weather_app/images/freezing-rain.svg',// Light freezing rain
+    67: '../weather_app/images/freezing-rain.svg',// Heavy freezing rain
+    71: '../weather_app/images/snow.svg',         // Slight snow fall
+    73: '../weather_app/images/snow.svg',         // Moderate snow fall
+    75: '../weather_app/images/heavy-snow.svg',   // Heavy snow fall
+    77: '../weather_app/images/snow-grains.svg',  // Snow grains
+    80: '../weather_app/images/rain-showers.svg', // Slight rain showers
+    81: '../weather_app/images/rain-showers.svg', // Moderate rain showers
+    82: '../weather_app/images/violent-rain.svg', // Violent rain showers
+    85: '../weather_app/images/snow-showers.svg', // Slight snow showers
+    86: '../weather_app/images/heavy-snow-showers.svg', // Heavy snow showers
+    95: '../weather_app/images/thunderstorm.svg', // Thunderstorm
+    96: '../weather_app/images/thunderstorm-hail.svg', // Thunderstorm with slight hail
+    99: '../weather_app/images/thunderstorm-heavy-hail.svg' // Thunderstorm with heavy hail
   };
 
-  return iconMap[code] || '/weather_app/images/sun.svg'; // Default icon if code doesn't match
+  return iconMap[code] || '../weather_app/images/sun.svg'; // Default icon if code doesn't match
 }
 
 // Change location function to cycle through predefined locations
@@ -226,16 +226,16 @@ function removeActiveClass() {
 
 // Array of random background images
 const backgroundImages = [
-  '/weather_app/images/random_bg_1.png',
-  '/weather_app/images/random_bg_2.png',
-  '/weather_app/images/random_bg_3.png',
-  '/weather_app/images/random_bg_4.png',
-  '/weather_app/images/random_bg_5.png',
-  '/weather_app/images/random_bg_6.png',
-  '/weather_app/images/random_bg_7.png',
-  '/weather_app/images/random_bg_8.png',
-  '/weather_app/images/random_bg_9.png',
-  '/weather_app/images/random_bg_10.png'
+  '../weather_app/images/random_bg_1.png',
+  '../weather_app/images/random_bg_2.png',
+  '../weather_app/images/random_bg_3.png',
+  '../weather_app/images/random_bg_4.png',
+  '../weather_app/images/random_bg_5.png',
+  '../weather_app/images/random_bg_6.png',
+  '../weather_app/images/random_bg_7.png',
+  '../weather_app/images/random_bg_8.png',
+  '../weather_app/images/random_bg_9.png',
+  '../weather_app/images/random_bg_10.png'
 ];
 
 // Function to apply a random background image to .weather-side

@@ -62,7 +62,8 @@ body {
 .interactive-button__content {
   display: block;
   position: relative;
-  transition: transform var(--transition-duration-default) var(--ease-in-out-swing);
+  transition: transform var(--transition-duration-default)
+    var(--ease-in-out-swing);
 }
 
 .interactive-button:hover .interactive-button__content {
@@ -80,7 +81,8 @@ body {
   inline-size: 100%;
   block-size: 100%;
   overflow: visible;
-  transition: transform var(--transition-duration-default) var(--ease-in-out-swing);
+  transition: transform var(--transition-duration-default)
+    var(--ease-in-out-swing);
 }
 
 @supports not (d: path("")) {

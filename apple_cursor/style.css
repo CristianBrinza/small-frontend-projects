@@ -1,0 +1,40 @@
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-gap: 15px;
+  margin: 30px auto;
+  padding: 15px;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+a[download] {
+  display: inline-block;
+  padding-top: 100%;
+  border-radius: 6px;
+  background: center center no-repeat #ffa6cd;
+  background-size: 50%;
+  transition: transform 250ms ease;
+}
+
+a[download]:hover,
+a[download]:focus {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+.hidden-text {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}

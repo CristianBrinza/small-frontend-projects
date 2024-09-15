@@ -1,52 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Shrikhand', serif; /* Using only Shrikhand as the main font */
+html,
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Shrikhand", serif; /* Using only Shrikhand as the main font */
 }
 
 /* Ensures the splash screen fills the viewport */
 #splash {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Responsive typography for the title */
 h1 {
-    text-align: center;
-    line-height: 1.2;
-    letter-spacing: 5px;
-    font-size: 8vw; /* Make font-size responsive based on viewport width */
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  font-size: 8vw; /* Make font-size responsive based on viewport width */
 }
 
 #title {
-    color: #F4EBCF;
-    text-shadow: 10px 10px #EB492C;
+  color: #f4ebcf;
+  text-shadow: 10px 10px #eb492c;
 }
 
 /* Media Queries for different screen sizes */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 12vw; /* Increase font size for tablets */
-    }
+  h1 {
+    font-size: 12vw; /* Increase font size for tablets */
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 16vw; /* Increase font size for smaller mobile screens */
-        letter-spacing: 2px; /* Adjust letter spacing for readability */
-    }
+  h1 {
+    font-size: 16vw; /* Increase font size for smaller mobile screens */
+    letter-spacing: 2px; /* Adjust letter spacing for readability */
+  }
 }

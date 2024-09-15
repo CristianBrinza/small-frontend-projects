@@ -1,45 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Non-rectangular shape with rounded corners</title>
 </head>
+
 <body>
 
   <style>
-    div { 
+    div {
       width: 20em;
       aspect-ratio: 1;
-      background: 
-        conic-gradient(at 65% 35%, 
+      background:
+        conic-gradient(at 65% 35%,
           #0000 25%, crimson 0%);
       filter: blur(1.5em) url(#goo)
     }
 
-    html, body { display: grid }
+    html,
+    body {
+      display: grid
+    }
 
-    html { min-height: 100vh }
+    html {
+      min-height: 100vh
+    }
 
     body {
       place-content: center;
     }
 
-    svg[aria-hidden='true'] { position: fixed }
+    svg[aria-hidden='true'] {
+      position: fixed
+    }
   </style>
 
   <svg width='0' height='0' aria-hidden='true'>
     <filter id='goo'>
       <feComponentTransfer>
-        <feFuncA type='discrete' tableValues='0 1'/>
+        <feFuncA type='discrete' tableValues='0 1' />
       </feComponentTransfer>
-    
-      <feGaussianBlur stdDeviation='3'/>
+
+      <feGaussianBlur stdDeviation='3' />
       <!-- get rid of edge blurriness -->
       <!-- by reducing the number of semitransparent pixels-->
       <!-- alphas in the [0, 1] interval get mapped to the [-2, 3] one-->
       <!-- then values get clamped to [0, 1] anyway-->
       <feComponentTransfer>
-        <feFuncA type='table' tableValues='-2 3'/>
+        <feFuncA type='table' tableValues='-2 3' />
       </feComponentTransfer>
     </filter>
   </svg>
@@ -48,7 +57,7 @@
   <div id="random-color"></div>
 
   <script>
-    window.onload = function() {
+    window.onload = function () {
       // Array of colors
       const colors = ['crimson', 'blue', 'green', 'orange', 'purple', 'yellow', 'pink'];
 
@@ -60,6 +69,7 @@
       div.style.background = `conic-gradient(at 65% 35%, #0000 25%, ${randomColor} 0%)`;
     };
   </script>
-  
+
 </body>
+
 </html>

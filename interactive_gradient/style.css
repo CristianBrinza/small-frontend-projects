@@ -1,0 +1,234 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --color-bg1: rgb(8, 10, 15);   /* Default background colors */
+  --color-bg2: rgb(0, 17, 32);
+  --color1: 18, 113, 255;
+  --color2: 107, 74, 255;
+  --color3: 100, 100, 255;
+  --color4: 50, 160, 220;
+  --color5: 80, 47, 122;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending-mode: hard-light;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #FFF;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Container styles */
+.overlay-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  padding: 2rem;
+  z-index: 10;
+  user-select: none;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  overflow: hidden;
+}
+
+.overlay-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 34%, white 89%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.3;
+  filter: blur(0.5px);
+  mix-blend-mode: hard-light;
+  z-index: 2;
+}
+
+.overlay-card .noise-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.overlay-card .content {
+  position: relative;
+  z-index: 2;
+  text-shadow: -3px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Background gradient styles */
+.gradient-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  overflow: hidden;
+}
+
+.gradient-background .noise-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: soft-light;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.gradient-background .blur-filter {
+  display: none;
+}
+
+.gradient-background .gradients-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: url(#gooey-effect) blur(40px);
+}
+
+/* Gradient circles */
+.gradient-circle {
+  position: absolute;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  mix-blend-mode: var(--blending-mode);
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0%, rgba(var(--color1), 0) 50%);
+  opacity: 1;
+  animation: floatVertical 30s ease-in-out infinite;
+}
+
+/* Additional gradient circles with different colors */
+.gradient-circle:nth-child(2) {
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0%, rgba(var(--color2), 0) 50%);
+  transform-origin: calc(50% - 400px);
+  animation: rotateCircle 22s reverse infinite;
+}
+
+.gradient-circle:nth-child(3) {
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0%, rgba(var(--color3), 0) 50%);
+  transform-origin: calc(50% + 400px);
+  animation: rotateCircle 38s linear infinite;
+}
+
+.gradient-circle:nth-child(4) {
+  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0%, rgba(var(--color4), 0) 50%);
+  transform-origin: calc(50% - 200px);
+  animation: floatHorizontal 42s ease infinite;
+  opacity: 0.7;
+}
+
+.gradient-circle:nth-child(5) {
+  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0%, rgba(var(--color5), 0) 50%);
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: rotateCircle 18s ease infinite;
+}
+
+/* Interactive bubble */
+.interactive-bubble {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+  opacity: 0.7;
+  mix-blend-mode: var(--blending-mode);
+  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0%, rgba(var(--color-interactive), 0) 50%);
+}
+
+/* Keyframes */
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes floatHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .overlay-card {
+    max-width: 600px;
+    padding: 3rem;
+  }
+}

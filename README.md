@@ -13,5 +13,6 @@
   <li><a href="step_indicator/index.html">Step Indicator</a></li>
   <li><a href="text_effect_writing/index.html">Text Effect Writing</a></li>
   <li><a href="weather_app/index.html">Weather app</a></li>
-<li><a href="interactive_gradient/index.html">Interactive Gradient</a></li>
+  <li><a href="interactive_gradient/index.html">Interactive Gradient</a></li>
+  <li><a href="google_loader/index.html">Google Loader</a></li>
  </ul>
